@@ -1,9 +1,15 @@
 from test_framework import generic_test
 
+"""
+Time Complexity: O(1)
+Space Complexity: O(1)
+Hint: First we extract the bits at i and j, then we XOR them if they are different.
+"""
 
 def swap_bits(x, i, j):
-    # TODO - you fill in here.
-    return 0
+    if (x >> i) & 1 != (x >> j) & 1:
+        x ^= (1 << i) | (1 << j)
+    return x
 
 
 if __name__ == '__main__':
