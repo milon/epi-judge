@@ -1,9 +1,19 @@
 from test_framework import generic_test
 
+"""
+Time Complexity: O(n)
+Space Complexity: O(1)
+"""
 
 def power(x: float, y: int) -> float:
-    # TODO - you fill in here.
-    return 0.0
+    res, power = 1.0, y
+    if y < 0:
+        power, x = -power, 1.0 / x
+    while power:
+        if power & 1:
+            res *= x
+        x, power = x * x, power >> 1
+    return res
 
 
 if __name__ == '__main__':
