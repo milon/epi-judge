@@ -1,5 +1,10 @@
 from test_framework import generic_test
 
+"""
+Time Complexity: O(n)
+Space Complexity: O(1)
+Hint: Count the last bit of x by logical AND it with 1 and XOR it with the result to find parity.
+"""
 
 def parity(x: int) -> int:
     res = 0
